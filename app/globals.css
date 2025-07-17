@@ -1,0 +1,198 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 17 24 39;
+    --foreground: 243 244 246;
+    --card: 31 41 55;
+    --card-foreground: 243 244 246;
+    --popover: 31 41 55;
+    --popover-foreground: 243 244 246;
+    --primary: 59 130 246;
+    --primary-foreground: 243 244 246;
+    --secondary: 55 65 81;
+    --secondary-foreground: 243 244 246;
+    --muted: 55 65 81;
+    --muted-foreground: 156 163 175;
+    --accent: 55 65 81;
+    --accent-foreground: 243 244 246;
+    --destructive: 239 68 68;
+    --destructive-foreground: 243 244 246;
+    --border: 75 85 99;
+    --input: 75 85 99;
+    --ring: 59 130 246;
+    --radius: 0.75rem;
+    --chart-1: 59 130 246;
+    --chart-2: 139 92 246;
+    --chart-3: 34 197 94;
+    --chart-4: 251 191 36;
+    --chart-5: 236 72 153;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-gray-900 text-gray-100;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced animations */
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* Gradient text animation */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background: linear-gradient(-45deg, #fbbf24, #f59e0b, #ec4899, #8b5cf6);
+  background-size: 400% 400%;
+  animation: gradient 3s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition: all 0.3s ease;
+}
+
+/* Enhanced button hover effects */
+.btn-enhanced:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4b5563;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+/* Import coding font */
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
+
+/* Coding theme animations */
+@keyframes matrix {
+  0% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+.animate-matrix {
+  animation: matrix 8s linear infinite;
+}
+
+/* Code syntax highlighting colors */
+.syntax-keyword {
+  color: #8b5cf6;
+}
+.syntax-string {
+  color: #10b981;
+}
+.syntax-comment {
+  color: #6b7280;
+}
+.syntax-function {
+  color: #3b82f6;
+}
+.syntax-variable {
+  color: #f59e0b;
+}
+
+/* Enhanced glow effects for coding theme */
+@keyframes code-glow {
+  0%,
+  100% {
+    text-shadow: 0 0 5px rgba(59, 130, 246, 0.5), 0 0 10px rgba(59, 130, 246, 0.3), 0 0 15px rgba(59, 130, 246, 0.2);
+  }
+  50% {
+    text-shadow: 0 0 10px rgba(139, 92, 246, 0.8), 0 0 20px rgba(139, 92, 246, 0.5), 0 0 30px rgba(139, 92, 246, 0.3);
+  }
+}
+
+.animate-code-glow {
+  animation: code-glow 2s ease-in-out infinite;
+}
+
+/* Terminal cursor blink */
+@keyframes terminal-blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.terminal-cursor {
+  animation: terminal-blink 1s infinite;
+}
